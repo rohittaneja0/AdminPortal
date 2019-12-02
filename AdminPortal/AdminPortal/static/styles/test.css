@@ -1,9 +1,7 @@
-/* Made with love by Mutiullah Samim*/
-
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('http://getwallpapers.com/wallpaper/full/c/5/c/293356.jpg');
+background-image: url('http://getwallpapers.com/wallpaper/full/f/3/a/266537.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -26,7 +24,7 @@ background-color: rgba(0,0,0,0.5) !important;
 .social_icon span{
 font-size: 60px;
 margin-left: 10px;
-color: #FFC312;
+color: rgb(64, 135, 248);
 }
 
 .social_icon span:hover{
@@ -46,8 +44,8 @@ top: -45px;
 
 .input-group-prepend span{
 width: 50px;
-background-color: #FFC312;
-color: black;
+background-color: rgb(64, 135, 248);
+color: white;
 border:0 !important;
 }
 
@@ -70,8 +68,8 @@ margin-right: 5px;
 }
 
 .login_btn{
-color: black;
-background-color: #FFC312;
+color:white;
+background-color:rgb(64, 135, 248);
 width: 100px;
 }
 
