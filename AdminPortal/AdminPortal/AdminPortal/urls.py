@@ -19,11 +19,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
+from users import views as user_views
 
 urlpatterns = [
     path('',include('Portal.urls')),
     path('accounts/',include('accounts.urls')),
     path('admin/', admin.site.urls),
+    path('register/', user_views.register, name='register'),
 ]
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
