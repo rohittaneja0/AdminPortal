@@ -21,10 +21,12 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from users import views as user_views
 from Pages import views as page_views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('',include('Portal.urls')),
     path('accounts/',include('accounts.urls')),
+    #path('accounts/', auth_views.Login.as_view()(template_name='Portal/login.html'),name='login'),
     path('admin/', admin.site.urls),
     path('Pages/', page_views.globalPage,name='global'),
     path('register/', user_views.register, name='register'),
@@ -32,6 +34,8 @@ urlpatterns = [
     path('sales/',page_views.salPage,name='sales'),
     path('hr/',page_views.HRPage,name='HR'),
     path('engineer/',page_views.EngineerPage,name='Engineer'),
+    path('redirect/',page_views.red,name='Redirect'),
+    path('users/',page_views.user,name='User'),
 ]
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns

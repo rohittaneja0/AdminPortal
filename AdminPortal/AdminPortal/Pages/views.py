@@ -15,3 +15,9 @@ def HRPage(request):
 
 def EngineerPage(request):
     return render(request, 'Pages/Engineer.html')
+
+def red(request):
+    return render(request, 'Pages/Redirect.html')
+
+def user(request):
+    return render(request, 'Pages/User.html')
