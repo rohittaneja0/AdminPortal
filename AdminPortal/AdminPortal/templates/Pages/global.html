@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Global Page</title>
+	<title>Admin Page</title>
    
 	<!--Bootsrap 4 CDN-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -9,6 +9,11 @@
     <!--Fontawesome CDN-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+<style>
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+</style>
 	<!--Custom styles-->
 </head>
 <body>
@@ -20,26 +25,25 @@
         </button>
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
-
-            <div class= "collapse navbar-collapse justify-content-end">
-                
-                <ul class ="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Manage User</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Assign Role</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Help Desk</a>
-                    </li>
-                </ul>
-            </div>
-
+            <li class="nav-item dropdown" class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Manage User</a>
+                    <a class="dropdown-item" href="#">Assign Role</a>
+                    <a class="dropdown-item" href="#">Help Desk</a>
+                </div>
+            </li>
         </div>
     </nav>
 
 </div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
