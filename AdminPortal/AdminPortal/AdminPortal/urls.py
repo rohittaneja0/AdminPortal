@@ -20,12 +20,15 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from users import views as user_views
+from Pages import views as page_views
 
 urlpatterns = [
     path('',include('Portal.urls')),
     path('accounts/',include('accounts.urls')),
     path('admin/', admin.site.urls),
+    path('Pages/', page_views.globalPage,name='global'),
     path('register/', user_views.register, name='register'),
+    path('finance/',page_views.finPage, name='finance'),
 ]
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
