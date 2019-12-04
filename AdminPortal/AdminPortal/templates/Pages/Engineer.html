@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +30,7 @@
 			z-index:1;
 			top:0;
 			left:0;
-			background: #111;
+			background-color:#111;
 			overflow-x: hidden;
 			padding-top:20px;
 		}
@@ -53,17 +55,18 @@
 	</style>
 	<title>{% block title %}Admin Portal{% endblock %}</title>
 </head>
- 
+<!--Application Monitoring, Tech Support, App Development, App Admin, Release Management-->
 <body>
 	<div class="sidenav">
         <a href="/"><h2>Admin Portal</h2> </a>
 		<a href="/users"><h5>Manage Users</h5></a>
 		<a href="/assign"><h5>Assign Roles</h5></a>
 		<a href="/help"><h5>Help Desk</h5></a>
-        <a href="/users"><h5>Reports</h5></a>
-		<a href="/assign"><h5>Account Payable</h5></a>
-		<a href="/help"><h5>Account Recievable</h5></a>
-        <a href="/help"><h5>Tax</h5></a>
+        <a href="/users"><h5>Application Monitoring</h5></a>
+		<a href="/assign"><h5>Tech support</h5></a>
+		<a href="/help"><h5>App Development</h5></a>
+        <a href="/help"><h5>App Admin</h5></a>
+        <a href="/help"><h5>Release Management</h5></a>
 	</div>
  
 	{% block content %}

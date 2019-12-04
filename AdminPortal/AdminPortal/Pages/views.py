@@ -6,3 +6,12 @@ def globalPage(request):
 
 def finPage(request):
     return render(request, 'Pages/Finance.html')
+
+def salPage(request):
+    return render(request, 'Pages/Sales.html')
+
+def HRPage(request):
+    return render(request, 'Pages/HR.html')
+
+def EngineerPage(request):
+    return render(request, 'Pages/Engineer.html')

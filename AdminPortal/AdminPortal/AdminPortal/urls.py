@@ -29,6 +29,9 @@ urlpatterns = [
     path('Pages/', page_views.globalPage,name='global'),
     path('register/', user_views.register, name='register'),
     path('finance/',page_views.finPage, name='finance'),
+    path('sales/',page_views.salPage,name='sales'),
+    path('hr/',page_views.HRPage,name='HR'),
+    path('engineer/',page_views.EngineerPage,name='Engineer'),
 ]
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
