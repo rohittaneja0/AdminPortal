@@ -1,0 +1,21 @@
+body,html {
+    background-image: url('http://getwallpapers.com/wallpaper/full/e/3/1/266520.jpg');
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.card-header h3{
+    color: rgb(239, 241, 243);
+}
+
+.container{
+    color:white;
+}
+
+.card {
+background-color: rgba(10, 10, 10, 0.616) !important;
+}
+
+
+
