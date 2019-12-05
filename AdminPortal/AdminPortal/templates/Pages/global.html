@@ -52,11 +52,18 @@
  
 <body>
 	<div class="sidenav">
-        <a href="/"><h2>Admin Portal</h2> </a>
+        <a href="#"><h2>Admin Portal</h2> </a>
 		<a href="/users"><h5>Manage Users</h5></a>
-		<a href="/assign"><h5>Assign Roles</h5></a>
-		<a href="/help"><h5>Help Desk</h5></a>
-		<a href="/"><h5>Log Out</h5></a>
+		<a href="/redirect"><h5>Assign Roles</h5></a>
+		<a href="/redirect"><h5>Help Desk</h5></a>
+
+		<form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'user_logout' %}">
+                    {% csrf_token %}
+                    <a href="{% url 'user_login' %}">
+                        <span class="mr-sm-2">{{request.user.first_name}}</spans>
+                    </a>
+                    <input type="submit" class="btn btn-outline-danger my-2 my-sm-0" value="Logout">
+       </form>
 	</div>
  
 	{% block content %}

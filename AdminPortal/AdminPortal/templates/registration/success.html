@@ -10,19 +10,19 @@
        
         {% if request.user|has_group:"ADMIN" %}
         
-        <a class="btn btn-success float-right" href="{%  url 'employee_add' %}">Add employee</a>
+        <a class="btn btn-success float-right btn-primary" href="{%  url 'global' %}">View Admin Links</a>
         {% elif request.user|has_group:"ENGG" %}
         <h1>THIS IS ENGG</h1>
-        <a class="btn btn-success float-right" href="{%  url 'Engineer' %}">View Links</a>
+        <a class="btn btn-success float-right btn-primary" href="{%  url 'Engineer' %}">View Engineer Links</a>
         {% elif request.user|has_group:"SALES" %}
         <h1>THIS IS SALES</h1>
-        <a class="btn btn-success float-right" href="{%  url 'sales' %}">Add employee</a>
+        <a class="btn btn-success float-right btn-primary" href="{%  url 'sales' %}">View Sales Links</a>
         {% elif request.user|has_group:"HR" %}
         <h1>THIS IS HR</h1>
-        <a class="btn btn-success float-right" href="{%  url 'employee_add' %}">Add employee</a>
+        <a class="btn btn-success float-right btn-primary" href="{%  url 'HR' %}">View HR Links</a>
         {% elif request.user|has_group:"FINANCE" %}
         <h1>THIS IS FINANCE</h1>
-        <a class="btn btn-success float-right" href="{%  url 'employee_add' %}">Add employee</a>
+        <a class="btn btn-success float-right btn-primary" href="{%  url 'finance' %}">View Finance Links</a>
         {% else %}
         <h1>Wait for your role to be assigned</h1>
         {% endif %}
