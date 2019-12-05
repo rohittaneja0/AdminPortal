@@ -16,7 +16,7 @@
                     <a class="btn btn-success float-right" href="{%  url 'sales' %}">Add employee</a>
                     {% elif request.user|has_group:"HR" %}
                     <h1>THIS IS HR</h1>
-                    <a class="btn btn-success float-right" href="{%  url 'employee_add' %}">Add employee</a>
+                    <a class="btn btn-success float-right" href="{%  url 'HR' %}">Add employee</a>
                     {% elif request.user|has_group:"FINANCE" %}
                     <h1>THIS IS FINANCE</h1>
                     <a class="btn btn-success float-right" href="{%  url 'employee_add' %}">Add employee</a>
