@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 
 def login(request):
-    return render(request, 'Portal/login.html')
+    return render(request, 'registration/login.html')
 
 def home(request):
     return render(request, 'Portal/home.html')

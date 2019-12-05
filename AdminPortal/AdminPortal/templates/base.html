@@ -48,9 +48,15 @@
 
   <div class="jumbotron">
       <h1 class="container">Admin Portal</h1>
-      <p class="lead">
+      {% if user.is_authenticated %}
+        <p class ="lead">
+          <a class="btn btn-primary btn-lg" href="{% url 'HR'%}?next={{request.path}}">Admin</a>
+        </p>
+      {% else %}
+        <p class="lead">
           <a class="btn btn-primary btn-lg" href="{% url 'login'%}?next={{request.path}}">Login</a>
-      </p>
+        </p>
+      {% endif %}  
   </div>
 
 </body>
