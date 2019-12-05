@@ -1,7 +1,8 @@
 from django.urls import path
-from . import views
+from Portal.views import *
 
-app_name= 'Portal'
 urlpatterns = [
-    path('',views.index, name ='index'),
+    path('', employee_list, name='employee_list'),
+    path('<int:id>/details/', employee_details, name="employee_details"),
+    path('add/', employee_add, name="employee_add"),
 ]

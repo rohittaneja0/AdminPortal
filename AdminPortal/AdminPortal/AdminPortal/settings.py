@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'Portal.middlewares.RoleMiddleware'
 ]
 
 ROOT_URLCONF = 'AdminPortal.urls'
@@ -125,6 +126,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL = ''
+#LOGIN_REDIRECT_URL = ''
 
 
