@@ -26,6 +26,7 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('',include('Portal.urls')),
     path('accounts/',include('accounts.urls')),
+    path('', include("django.contrib.auth.urls")),
     #path('accounts/', auth_views.Login.as_view()(template_name='Portal/login.html'),name='login'),
     path('admin/', admin.site.urls),
     path('Pages/', page_views.globalPage,name='global'),
