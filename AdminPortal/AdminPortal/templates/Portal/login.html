@@ -44,11 +44,20 @@
 
         </div>
       </nav>
-       <!--End Navbar-->
-
+	   <!--End Navbar-->
+	   
 
 
 <div class="container-fluid">
+
+	{% if messages %}
+		{% for message in messages %}
+		<div class = "alert alert-{{message.tags}}">
+				<p>{{ message }}</p>
+		</div>
+		{% endfor %}
+	{% endif %}
+
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
@@ -60,8 +69,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username">
-						
+						<input type="text" class="form-control" placeholder="username">									
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
