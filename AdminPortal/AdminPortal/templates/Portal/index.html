@@ -6,7 +6,7 @@
                 <p>
                     <div class="float-left"><h3>List of {{title}}</h3></div>
                     {% if request.user|has_group:"ADMIN" %}
-                    <h1>THIS IS ADMIN</h1>
+                    
                     <a class="btn btn-success float-right" href="{%  url 'employee_add' %}">Add employee</a>
                     {% elif request.user|has_group:"ENGG" %}
                     <h1>THIS IS ENGG</h1>

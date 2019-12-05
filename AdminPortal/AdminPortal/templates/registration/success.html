@@ -1,3 +1,4 @@
+{% load auth_extra %}
 {% block content %}
     <p>User <b>{{user.username}}</b> is logged in successfully.</p>
     <form method="POST" action="/logout/">
@@ -5,3 +6,25 @@
         <input type="submit" value="Logout">
     </form>
 {% endblock content %}
+<p>
+       
+        {% if request.user|has_group:"ADMIN" %}
+        
+        <a class="btn btn-success float-right" href="{%  url 'employee_add' %}">Add employee</a>
+        {% elif request.user|has_group:"ENGG" %}
+        <h1>THIS IS ENGG</h1>
+        <a class="btn btn-success float-right" href="{%  url 'Engineer' %}">View Links</a>
+        {% elif request.user|has_group:"SALES" %}
+        <h1>THIS IS SALES</h1>
+        <a class="btn btn-success float-right" href="{%  url 'sales' %}">Add employee</a>
+        {% elif request.user|has_group:"HR" %}
+        <h1>THIS IS HR</h1>
+        <a class="btn btn-success float-right" href="{%  url 'employee_add' %}">Add employee</a>
+        {% elif request.user|has_group:"FINANCE" %}
+        <h1>THIS IS FINANCE</h1>
+        <a class="btn btn-success float-right" href="{%  url 'employee_add' %}">Add employee</a>
+        {% else %}
+        <h1>Wait for your role to be assigned</h1>
+        {% endif %}
+
+    </p>
