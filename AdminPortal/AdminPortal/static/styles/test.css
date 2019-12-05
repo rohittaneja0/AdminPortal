@@ -85,3 +85,15 @@ color: white;
 .links a{
 margin-left: 4px;
 }
+
+.card-header h3{
+    color: rgb(239, 241, 243);
+}
+
+.container{
+    color:white;
+}
+
+.card {
+background-color: rgba(10, 10, 10, 0.616) !important;
+}

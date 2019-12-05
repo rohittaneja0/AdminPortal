@@ -23,24 +23,25 @@
                                 
                                 {% if request.user|has_group:"ADMIN" %}
         
-                                <a class="nav-link" href="{% url 'Engineer' %}">
+                                <a class="nav-link" href="{% url 'global' %}">
                                     {{"View Links" | capfirst}}                                
                                 {% elif request.user|has_group:"ENGG" %}
                                 <a class="nav-link" href="{% url 'Engineer' %}">
                                     {{"View Links" | capfirst}}
                                 {% elif request.user|has_group:"SALES" %}
-                                <h1>THIS IS SALES</h1>
-                                <a class="nav-link" href="{% url 'Engineer' %}">
+                                
+                                <a class="nav-link" href="{% url 'sales' %}">
                                     {{"View Links" | capfirst}}
                                 {% elif request.user|has_group:"HR" %}
-                                <h1>THIS IS HR</h1>
+                                
                                 <a class="nav-link" href="{% url 'HR' %}">
                                     {{"View Links" | capfirst}}
                                 {% elif request.user|has_group:"FINANCE" %}
-                                <h1>THIS IS FINANCE</h1>
-                                <a class="nav-link" href="{% url 'Engineer' %}">
-                                    {{"View Links" | capfirst}}
                                 
+                                <a class="nav-link" href="{% url 'finance' %}">
+                                    {{"View Links" | capfirst}}
+                                {% else %}
+                                <h1>Pending</h1>
                                 {% endif %}
                                 </a>
                             </li>      
@@ -54,32 +55,31 @@
                         <input type="submit" class="btn btn-outline-danger my-2 my-sm-0" value="Logout">
                     </form>
                 </div>
+            
             <div class="alert alert-success" role="alert">
             <p>Welcome <b>{{user.username}}</b>, you have logged in successfully.</p>
             </div>
 
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="http://getwallpapers.com/wallpaper/full/c/f/d/293534.jpg" alt="First slide">
+                </div>
+            </div>
+           
+            </div>
+
             {% endblock content %}
-            <p>
+            
 
     </body>
 </html>
 
-        {% if request.user|has_group:"ADMIN" %}
-        
-        
-        {% elif request.user|has_group:"ENGG" %}
-        
-        {% elif request.user|has_group:"SALES" %}
-        
-        
-        {% elif request.user|has_group:"HR" %}
-        
-        
-        {% elif request.user|has_group:"FINANCE" %}
-        
-        
-        {% else %}
-        <h1>Pending role, please wait!</h1>
-        {% endif %}
+    
 
-    </p>
+    
